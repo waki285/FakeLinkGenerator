@@ -162,6 +162,15 @@ export default function App() {
             </a>
           </span>
           <span>
+            Advised by{" "}
+            <a
+              href="https://twitter.com/yuimarudev"
+              className="text-blue-500 hover:text-blue-600 visited:text-purple-600"
+            >
+              yuimaru
+            </a>
+          </span>
+          <span>
             GitHub:{" "}
             <a
               href="https://github.com/waki285/FakeLinkGenerator"
