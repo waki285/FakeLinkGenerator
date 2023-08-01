@@ -6,24 +6,27 @@ export default function App() {
   const [target, setTarget] = useState("");
   const [underline, setUnderline] = useState(false);
   const [fakeUrl, setFakeUrl] = useState("No URL Generated");
+  const [type, setType] = useState(2);
   const copyRef = useRef<HTMLButtonElement>(null);
   const gen = useCallback(
     (e: React.FormEvent<HTMLButtonElement>) => {
       const og = `(${target})`;
-      try {
-        const url = new URL(`https://${source}`);
-        const fake = `${underline ? "__" : ""}[https]${og}[://]${og}[${
-          url.hostname
-        }]${og}[${url.pathname + url.search + url.hash}]${og}${
-          underline ? "__" : ""
-        }`;
-        setFakeUrl(fake);
-      } catch (e) {
-        alert("Invalid Fake URL");
-        return;
+      if (type === 1) {
+        try {
+          const url = new URL(`https://${source}`);
+          const fake = `${underline ? "__" : ""}[https]${og}[://]${og}[${url.hostname
+            }]${og}[${url.pathname + url.search + url.hash}]${og}${underline ? "__" : ""
+            }`;
+          setFakeUrl(fake);
+        } catch (e) {
+          alert("Invalid Fake URL");
+          return;
+        }
+      } else {
+        setFakeUrl(`[${source.split("").join("\ufe0e")}](${target})`);
       }
     },
-    [source, target, underline]
+    [source, target, underline, type]
   );
   return (
     <div className="flex flex-col items-center justify-center">
@@ -85,6 +88,23 @@ export default function App() {
             className="ml-2 block text-gray-700 text-sm font-bold mb-2"
           >
             Underline
+          </label>
+        </div>
+        <div className="flex mt-4 cursor-pointer">
+          <input
+            id="type"
+            type="checkbox"
+            className="h-5 w-5 text-blue-600"
+            checked={type === 2}
+            onChange={(e) => {
+              setType(e.target.checked ? 2 : 1);
+            }}
+          />
+          <label
+            htmlFor="type"
+            className="ml-2 block text-gray-700 text-sm font-bold mb-2"
+          >
+            Use new type
           </label>
         </div>
         <button

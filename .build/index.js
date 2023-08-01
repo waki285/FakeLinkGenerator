@@ -1,0 +1,5 @@
+"use strict";
+
+// index.ts
+console.log("hello, world!");
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsiLi4vaW5kZXgudHMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnNvbGUubG9nKCdoZWxsbywgd29ybGQhJyk7XG4iXSwKICAibWFwcGluZ3MiOiAiOzs7QUFBQSxRQUFRLElBQUksZUFBZTsiLAogICJuYW1lcyI6IFtdCn0K
