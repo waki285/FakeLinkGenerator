@@ -1,0 +1,42 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "main": "src/js/client.tsx",
+  "repository": "https://github.com/waki285/suzuneu.com",
+  "author": "waki285 <suzuneu@suzuneu.com>",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "npm": "Please use yarn"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "clean": "rimraf dist",
+    "dev": "cross-env NODE_ENV=development node build.js --dev",
+    "prebuild": "yarn clean",
+    "predev": "yarn clean"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.14",
+    "esbuild": "^0.17.4",
+    "esbuild-plugin-copy": "^2.0.2",
+    "esbuild-sass-plugin": "^2.4.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^4.1.2"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "postcss-preset-env": "^8.0.0",
+    "react-device-detect": "^2.2.2",
+    "tailwindcss": "^3.2.4",
+    "wow.js": "^1.2.2",
+    "wowjs": "^1.1.3"
+  }
+}

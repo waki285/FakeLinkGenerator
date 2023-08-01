@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "target": "ES2021",
+    "lib": ["DOM", "ESNext"],
+    "allowJs": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "jsx": "react",
+    "module": "CommonJS"
+  },
+  "exclude": ["dist"]
+}
