@@ -12,9 +12,11 @@ export default function App() {
       const og = `(${target})`;
       try {
         const url = new URL(`https://${source}`);
-        const fake = `${underline ? "__":""}[https]${og}[://]${og}[${url.hostname}]${og}[${
-          url.pathname + url.search + url.hash
-        }]${og}${underline ? "__":""}`;
+        const fake = `${underline ? "__" : ""}[https]${og}[://]${og}[${
+          url.hostname
+        }]${og}[${url.pathname + url.search + url.hash}]${og}${
+          underline ? "__" : ""
+        }`;
         setFakeUrl(fake);
       } catch (e) {
         alert("Invalid Fake URL");
@@ -118,9 +120,9 @@ export default function App() {
                 ],
                 {
                   duration: 500,
-                  easing: "ease-in-out"
+                  easing: "ease-in-out",
                 }
-              )
+              );
             }}
             ref={copyRef}
           >
@@ -128,6 +130,28 @@ export default function App() {
           </button>
         </div>
       </main>
+      <footer>
+        <div className="text-center text-gray-500 text-xs flex flex-col items-center">
+          <span>
+            Created by{" "}
+            <a
+              href="https://twitter.com/suzuneu_discord"
+              className="text-blue-500 hover:text-blue-600 visited:text-purple-600"
+            >
+              すずねーう
+            </a>
+          </span>
+          <span>
+            GitHub:{" "}
+            <a
+              href="https://github.com/waki285/FakeLinkGenerator"
+              className="text-blue-500 hover:text-blue-600 visited:text-purple-600"
+            >
+              waki285/FakeLinkGenerator
+            </a>
+          </span>
+        </div>
+      </footer>
     </div>
   );
 }
