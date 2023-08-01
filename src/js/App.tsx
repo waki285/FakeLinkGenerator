@@ -6,7 +6,7 @@ export default function App() {
   const [target, setTarget] = useState("");
   const [underline, setUnderline] = useState(false);
   const [fakeUrl, setFakeUrl] = useState("No URL Generated");
-  const [type, setType] = useState(2);
+  const [type, setType] = useState(1);
   const copyRef = useRef<HTMLButtonElement>(null);
   const gen = useCallback(
     (e: React.FormEvent<HTMLButtonElement>) => {
