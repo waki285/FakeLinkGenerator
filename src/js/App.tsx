@@ -23,7 +23,7 @@ export default function App() {
           return;
         }
       } else {
-        setFakeUrl(`[${source.split("").join("\ufe0e")}](${target})`);
+        setFakeUrl(`[${["https://", source.split("")].join("").split("").join("\ufe0e")}](${target})`);
       }
     },
     [source, target, underline, type]
