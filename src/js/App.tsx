@@ -23,7 +23,7 @@ export default function App() {
         return;
       }
     },
-    [source, target]
+    [source, target, underline]
   );
   return (
     <div className="flex flex-col items-center justify-center">
