@@ -7,8 +7,7 @@
   "license": "MIT",
   "private": false,
   "engines": {
-    "npm": "Please use yarn",
-    "yarn": "1.22.19"
+    "npm": "Please use yarn"
   },
   "scripts": {
     "build": "node build.js",
