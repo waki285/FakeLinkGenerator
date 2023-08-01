@@ -1,8 +1,8 @@
 {
-  "name": "boilerplate",
+  "name": "fake-link-generator",
   "version": "1.0.0",
   "main": "src/js/client.tsx",
-  "repository": "https://github.com/waki285/suzuneu.com",
+  "repository": "https://github.com/waki285/FakeLinkGenerator",
   "author": "waki285 <suzuneu@suzuneu.com>",
   "license": "MIT",
   "private": false,
