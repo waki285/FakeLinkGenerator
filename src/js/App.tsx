@@ -14,8 +14,8 @@ export default function App() {
       if (type === 1) {
         try {
           const url = new URL(`https://${source}`);
-          const fake = `${underline ? "__" : ""}[https]${og}[://]${og}[${url.hostname
-            }]${og}[${url.pathname + url.search + url.hash}]${og}${underline ? "__" : ""
+          const fake = `${underline ? "__" : ""}[https://]${og}[${url.hostname
+             + url.pathname + url.search + url.hash}]${og}${underline ? "__" : ""
             }`;
           setFakeUrl(fake);
         } catch (e) {
